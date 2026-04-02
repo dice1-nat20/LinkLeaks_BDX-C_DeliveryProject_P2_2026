@@ -41,7 +41,6 @@
     │   └── style.css    <br>
     │   └── singalement.html    <br>
     │   <br>
-    │   <br>
     ├── 📁 img/    <br>
 	│   └── attentionImage.png		<br>
 	│   └── bg_im_1.jpg		<br>
@@ -60,7 +59,10 @@
 <h2 id="1">Langage et Framework</h2>
 <h3>Langage</h3>
 <p>
-    Nous avons choisi d'utiliser HTML, CSS et JavaScript pour la partie web, et python falsk pour la couche applicative.
+    Nous avons évidemment utilisé les langages du web de base, c'es-à-dire HTML, CSS et JavaScript. De plus, et comme dit plus haut, 
+	nous avons utilisé Python avec son framework Flask pour pouvoir récupérer les réponses de notre formulaires et les envoyer dans 
+	une base de données pour les-y stocker. Enfin nous avons utilisé le langage SQL, via le SGBD MySql, pour mettre ne place notre 
+	base de données.
 </p>
 
 <br>
