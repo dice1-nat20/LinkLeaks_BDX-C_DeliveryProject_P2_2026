@@ -41,6 +41,7 @@
     │   └── accueil.html    <br>
     │   └── index.html    <br>
 	│   └── style.css    <br>
+	│   └── admin.html    <br>	
     │   <br>
     ├── 📁 img/    <br>
 	│   └── attentionImage.png		<br>
