@@ -5,6 +5,7 @@
   [![HTML5](https://img.shields.io/badge/HTML-5+-E34F26?logo=html5)](https://fr.wikipedia.org/wiki/Hypertext_Markup_Language)
   [![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](https://fr.wikipedia.org/wiki/Feuilles_de_style_en_cascade)
   [![JS](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)](https://fr.wikipedia.org/wiki/JavaScript)
+  [![OpenStreetMap](#)](https://wiki.openstreetmap.org/wiki/API)
 </div>
 
 <br><br><br>
