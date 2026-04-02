@@ -4,30 +4,30 @@ USE fuite;
 
 
 CREATE TABLE utilisateur (
-    utilisateur_id INT PRIMARY KEY,
+    utilisateur_id int AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(50),
     prenom VARCHAR(50),
     num_tel varchar(20),
-    adress_mail varchar(100),
+    email varchar(100) UNIQUE,
     IP varchar(100)
 );
 
 
 
 CREATE TABLE fuite (
-    fuite_id INT PRIMARY KEY,
-    fuite_latitude varchar(50),
-    fuite_longitude varchar(50)
+    fuite_id INT AUTO_INCREMENT PRIMARY KEY,
+    fuite_latitude decimal(9,6),
+    fuite_longitude decimal(9,6)
 );
 
 
 CREATE TABLE signaler (
-	commentaire varchar(50),
+	id int AUTO_INCREMENT PRIMARY KEY,
+	commentaire varchar(100),
     statut varchar(50),
     photo varchar(100),
     utilisateur_id int,
     fuite_id int,
-    PRIMARY KEY (utilisateur_id, fuite_id),
     FOREIGN KEY (utilisateur_id) REFERENCES utilisateur(utilisateur_id),
     FOREIGN KEY (fuite_id) REFERENCES fuite(fuite_id)
 );
