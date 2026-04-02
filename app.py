@@ -7,7 +7,7 @@ app = Flask(__name__)
 # --- 1. CONFIGURATION MYSQL ---
 # Remplace 'TON_MDP' par le mot de passe de ton utilisateur root dans Workbench
 # 'localhost' fonctionne car MySQL est sur le même ordinateur
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:efrei_ulysse@localhost/fuites_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:TON_MDP@localhost/fuites_db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
