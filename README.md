@@ -7,7 +7,7 @@
   [![JS](https://shields.io/badge/JavaScript-F7DF1E?logo=JavaScript&logoColor=000&style=flat-square)](https://fr.wikipedia.org/wiki/JavaScript)
 </div>
 
-<br><br><br><br><br>
+<br><br><br>
 
 <h2>Rappels importants</h2>
 <p>
@@ -23,9 +23,9 @@
 
 <h2>Sommaire</h2>
 <ol>
-    <li><a href="#3"> Langage et Bibliothèques </a></li>
-    <li><a href="#1"> Fonctionnalités attendues </a></li>
-    <li><a href="#2"> ... </a></li> 
+    <li><a href="#3"> Arborescence du projet </a></li>
+    <li><a href="#1"> Langage et Framework </a></li>
+    <li><a href="#2"> Fonctionnalités attendues </a></li> 
     <li><a href="#4"> ... </a></li>
     <li><a href="#5"> ... </a></li>
 </ol>
@@ -36,14 +36,22 @@
 <p>
     L'arborescence de notre projet est la suivante :    <br>
     .    <br>
-    ├── 📁 [nom du dossier]/    <br>
-    │   └── [contenu n°0]    <br>
-    │   ...    <br>
-    │   └── [contenu n°N]    <br>
+    ├── 📁 html/    <br>
+    │   └── index.html    <br>
+    │   └── style.css    <br>
+    │   └── singalement.html    <br>
     │   <br>
     │   <br>
-    ├── [emoji] [nom du fichier]    <br>
+    ├── 📁 img/    <br>
+	│   └── attentionImage.png		<br>
+	│   └── bg_im_1.jpg		<br>
+	│   └── logo.ico		<br>
+	│   └── logo1.png		<br>
     │   <br>
+	├── :page_facing_up: JavaScript    <br>
+	│   <br>
+	├── :file_cabinet: linkleaks.sql    <br>
+	│   <br>
     └── 📜 README.md    <br>
 </p>
 
