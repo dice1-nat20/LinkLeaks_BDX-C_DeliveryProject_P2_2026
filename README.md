@@ -60,8 +60,7 @@
 <h3>Langage</h3>
 <p>
     Nous avons évidemment utilisé les langages du web de base, c'es-à-dire HTML, CSS et JavaScript. De plus, et comme dit plus haut, 
-	nous avons utilisé Python avec son framework Flask pour pouvoir récupérer les réponses de notre formulaires et les envoyer dans 
-	une base de données pour les-y stocker. Enfin nous avons utilisé le langage SQL, via le SGBD MySql, pour mettre ne place notre 
+	nous avons utilisé Python avec son framework Flask? Enfin nous avons utilisé le langage SQL, via le SGBD MySql, pour mettre ne place notre 
 	base de données.
 </p>
 
@@ -69,7 +68,8 @@
 
 <h3>Framework</h3>
 <p>
-    Flask : c'est un micro framework open-source de développement web en Python. Il est classé comme microframework car il est très léger.
+    Flask : c'est un micro framework open-source de développement web en Python. Il est classé comme microframework car il est très léger. Nous 
+	l'avons utilisé pour pouvoir récupérer les réponses de notre formulaires et les envoyer dans une base de données pour les-y stocker.
 </p>
 
 <br><br>
