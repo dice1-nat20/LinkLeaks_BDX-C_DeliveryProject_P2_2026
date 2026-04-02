@@ -37,9 +37,17 @@ h1{
 footer {
     text-align:left;
     font-size: 90%;
+    background-image: url(../img/footer_bg.png);
+    margin: -8px;
+    margin-top: 111px;
+    margin-bottom:-14px;
+    background-attachment: fixed;
+    background-size: 100%;
 }
 
 .submit {
+    padding-left: 5px;
+    padding-right: 5px;
     display: inline-block;
     font-size: 200%;
     cursor: pointer;
@@ -52,6 +60,7 @@ footer {
 }
 .submit:hover {
     background-color: rgba(30,111,255, 1);
+    border-color: rgba(30,111,255, 1);
     transform: scale(1.2);
     font-weight: bold;
 }
