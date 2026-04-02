@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS fuite;
-USE fuite;
+CREATE DATABASE IF NOT EXISTS fuites_db;
+USE fuites_db;
 
 
 
