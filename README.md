@@ -24,7 +24,7 @@
 <h2>Sommaire</h2>
 <ol>
     <li><a href="#3"> Arborescence du projet </a></li>
-    <li><a href="#1"> Langage et Framework </a></li>
+    <li><a href="#1"> Langage, Framework et API</a></li>
     <li><a href="#2"> Fonctionnalités attendues </a></li> 
     <li><a href="#4"> ... </a></li>
     <li><a href="#5"> ... </a></li>
@@ -56,7 +56,7 @@
 
 <br><br>
 
-<h2 id="1">Langage et Framework</h2>
+<h2 id="1">Langage, Framework et API</h2>
 <h3>Langage</h3>
 <p>
     Nous avons évidemment utilisé les langages du web de base, c'es-à-dire HTML, CSS et JavaScript. De plus, et comme dit plus haut, 
@@ -70,6 +70,16 @@
 <p>
     Flask : c'est un micro framework open-source de développement web en Python. Il est classé comme microframework car il est très léger. Nous 
 	l'avons utilisé pour pouvoir récupérer les réponses de notre formulaires et les envoyer dans une base de données pour les-y stocker.
+</p>
+
+<br>
+
+<h3>API</h3>
+<p>
+	Le coeur de notre projet est une carte interractive permettant un signalement précis et facile. Afin de l'implémenter, nous n'avons pas tout 
+	fait nous même mais avons préféré utiliser une APi OpenSource nommée : Open Street Map. Elle s'implémente avec Javascript et permet de placer
+	une carte interrective directement dans la page de façon assez simple, et de récupérer les actions faites sur la carte (comme des cliques par 
+	exemple).
 </p>
 
 <br><br>
