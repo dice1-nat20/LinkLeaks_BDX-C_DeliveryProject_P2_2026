@@ -37,10 +37,10 @@
 <p>
     L'arborescence de notre projet est la suivante :    <br>
     .    <br>
-    ├── 📁 html/    <br>
+    ├── 📁 templates/    <br>
+    │   └── accueil.html    <br>
     │   └── index.html    <br>
-    │   └── style.css    <br>
-    │   └── singalement.html    <br>
+	│   └── style.css    <br>
     │   <br>
     ├── 📁 img/    <br>
 	│   └── attentionImage.png		<br>
@@ -51,6 +51,8 @@
 	├── :page_facing_up: JavaScript    <br>
 	│   <br>
 	├── :file_cabinet: linkleaks.sql    <br>
+	├── :file_cabinet: VerificationsDeDataBase.sql    <br>
+	├── :file_cabinet: linkleaks.loo    <br>
 	│   <br>
     └── 📜 README.md    <br>
 </p>
