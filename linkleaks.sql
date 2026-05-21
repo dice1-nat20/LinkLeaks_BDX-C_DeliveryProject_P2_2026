@@ -3,7 +3,7 @@ USE fuite;
 
 
 
-CREATE TABLE utilisateur (
+CREATE TABLE IF NOT EXISTS utilisateur (
     utilisateur_id INT PRIMARY KEY,
     nom VARCHAR(50),
     prenom VARCHAR(50),
@@ -14,14 +14,14 @@ CREATE TABLE utilisateur (
 
 
 
-CREATE TABLE fuite (
+CREATE TABLE IF NOT EXISTS fuite (
     fuite_id INT PRIMARY KEY,
     fuite_latitude varchar(50),
     fuite_longitude varchar(50)
 );
 
 
-CREATE TABLE signaler (
+CREATE TABLE IF NOT EXISTS signaler (
 	commentaire varchar(50),
     statut varchar(50),
     photo varchar(100),

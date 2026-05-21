@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des utilisateurs</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Liste des utilisateurs</h1>
+
+    <ul>
+      {% for user in users %}
+        <li>{{ user.nom }} {{ user.prenom }} - {{ user.email }}</li>
+      {% endfor %}
+    </ul>
+
+    <h2>Ajouter un utilisateur</h2>
+    <form method="POST" action="{{ url_for('inscription') }}">
+        <input name="nom" placeholder="Nom" required>
+        <input name="prenom" placeholder="Prénom" required>
+        <input name="num_tel" placeholder="Numéro de téléphone" required>
+        <input type="email" name="adress_mail" placeholder="Email" required><br>
+        <button type="submit">Ajouter</button>
+    </form>
+
+    <p><a href="/signaler">Aller à la page de signalement</a></p>
+</body>
+</html>

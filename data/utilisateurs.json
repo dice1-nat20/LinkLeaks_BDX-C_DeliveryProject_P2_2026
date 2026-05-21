@@ -1,0 +1,26 @@
+[
+    {
+        "utilisateur_id": 1,
+        "nom": "chen",
+        "prenom": "lana",
+        "num_tel": "0782228802",
+        "adress_mail": "chen.lana06@gmail.com",
+        "IP": "127.0.0.1"
+    },
+    {
+        "utilisateur_id": 2,
+        "nom": "chen",
+        "prenom": "lana",
+        "num_tel": "0782228802",
+        "adress_mail": "chen.lana06@gmail.com",
+        "IP": "127.0.0.1"
+    },
+    {
+        "utilisateur_id": 3,
+        "nom": "ccaca",
+        "prenom": "ldodd",
+        "num_tel": "078394833",
+        "adress_mail": "chfds06@gmail.com",
+        "IP": "127.0.0.1"
+    }
+]

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Admin - LinkLeaks</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body { font-family: sans-serif; margin: 20px; background: #f4f4f4; }
+        table { width: 100%; border-collapse: collapse; background: white; }
+        th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #007bff; color: white; }
+        img { width: 100px; height: auto; border-radius: 5px; cursor: pointer; }
+        .gps-link { color: #007bff; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>Liste des signalements reçus</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Photo</th>
+                <th>Commentaire</th>
+                <th>Statut</th>
+                <th>Position (GPS)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for s, f in signalements %}
+            <tr>
+                <td>{{ s.id }}</td>
+                <td>
+                    {% if s.photo %}
+                    <a href="{{ url_for('static', filename='uploads/' + s.photo) }}" target="_blank">
+                        <img src="{{ url_for('static', filename='uploads/' + s.photo) }}" alt="Fuite">
+                    </a>
+                    {% else %} No photo {% endif %}
+                </td>
+                <td>{{ s.commentaire }}</td>
+                <td><strong>{{ s.statut }}</strong></td>
+                <td>
+                    <a class="gps-link" href="https://www.google.com/maps?q={{ f.fuite_latitude }},{{ f.fuite_longitude }}" target="_blank">
+                        Voir sur Maps ({{ f.fuite_latitude }}, {{ f.fuite_longitude }})
+                    </a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p><a href="/"> <br> ← Retour au formulaire</a></p>
+</body>
+</html>

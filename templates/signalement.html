@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinkLeaks - Signalement</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map { height: 350px; width: 100%; border-radius: 10px; margin-bottom: 15px; }
+        body { font-family: sans-serif; padding: 20px; max-width: 600px; margin: auto; }
+        input, button, textarea { width: 100%; padding: 10px; margin-top: 10px; box-sizing: border-box; }
+        button { background-color: #007bff; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>Signaler une fuite d'eau</h2>
+    <div id="map"></div>
+
+    <form action="/signaler" method="POST" enctype="multipart/form-data">
+        <input type="hidden" name="lat" id="lat" required>
+        <input type="hidden" name="lng" id="lng" required>
+
+        <textarea name="commentaire" placeholder="Décrivez la fuite..."></textarea>
+
+        <p>Prendre une photo (obligatoire) :</p>
+        <input type="file" name="photo" accept="image/*" capture="environment" required>
+
+        <button type="submit">Envoyer le signalement</button>
+    </form>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([46.6, 2.2], 6);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        var marker;
+
+        // Fonction pour placer le marqueur
+        function onLocationFound(e) {
+            if (marker) map.removeLayer(marker);
+            marker = L.marker(e.latlng).addTo(map);
+            document.getElementById('lat').value = e.latlng.lat;
+            document.getElementById('lng').value = e.latlng.lng;
+            map.setView(e.latlng, 16);
+        }
+
+        // Fonction si le GPS échoue
+        function onLocationError(e) {
+            alert("Erreur GPS : " + e.message + ". Vérifiez que vous avez autorisé la localisation dans les réglages du téléphone.");
+        }
+
+        map.on('locationfound', onLocationFound);
+        map.on('locationerror', onLocationError);
+
+        // On lance la recherche
+        map.locate({setView: true, maxZoom: 16, enableHighAccuracy: true});
+
+        // Garder le clic manuel au cas où le GPS échoue
+        map.on('click', function(e) {
+            if (marker) map.removeLayer(marker);
+            marker = L.marker(e.latlng).addTo(map);
+            document.getElementById('lat').value = e.latlng.lat;
+            document.getElementById('lng').value = e.latlng.lng;
+        });
+    </script>
+</body>
+</html>
