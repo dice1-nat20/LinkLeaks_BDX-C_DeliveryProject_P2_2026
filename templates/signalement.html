@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkLeaks - Signalement</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
         #map { height: 350px; width: 100%; border-radius: 10px; margin-bottom: 15px; }
@@ -16,6 +17,8 @@
     <h2>Signaler une fuite d'eau</h2>
     <div id="map"></div>
 
+
+
     <form action="/signaler" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="lat" id="lat" required>
         <input type="hidden" name="lng" id="lng" required>
@@ -27,6 +30,8 @@
 
         <button type="submit">Envoyer le signalement</button>
     </form>
+
+
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>

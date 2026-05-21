@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="../static/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" type="image" href="../static/img/logo.ico">
         <title>Link Leaks - Accueil</title>
@@ -11,13 +11,13 @@
         <header>
             <h1>Link Leaks</h1>
             <nav>
-                 <a href="../templates/inscription.html" class="submit" target="blank">Inscription</a>
+                 <a href="{{ url_for('inscription') }}" class="submit" target="_blank">Inscription</a>
 
             </nav>
         </header>
         <br>
         <img src="../static/img/attentionImage.png" alt="attention" height="20%" width="20%"><br>
-        <a href="../templates/signalement.html" class="submit" target="blank">Signaler</a>
+        <a href="{{ url_for('signalement_page') }}" class="submit" target="blank">Signaler</a>
         <br><br><br>
 
         <h3>Qui sommes nous ?</h3>

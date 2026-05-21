@@ -3,7 +3,7 @@ body {
     color: dodgerblue;
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../static/img/bg_im_1.jpg);
+    background-image: url(img/bg_im_1.jpg);
     background-attachment: fixed;
     background-size: 100%;
 }
@@ -37,7 +37,7 @@ h1{
 footer {
     text-align:left;
     font-size: 90%;
-    background-image: url(../static/img/footer_bg.png);
+    background-image: url(img/footer_bg.png);
     margin: -8px;
     margin-top: 111px;
     margin-bottom:-14px;

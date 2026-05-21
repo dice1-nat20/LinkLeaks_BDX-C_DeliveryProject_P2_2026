@@ -44,27 +44,64 @@ def inscription():
         return redirect(url_for('index'))
     return render_template('inscription.html')
 
-# Page signalement
-@app.route('/signalement', methods=['GET', 'POST'])
-def signalement():
+
+
+@app.route('/signalement')
+def signalement_page():
+    return render_template('signalement.html')
+
+
+
+DATA_DIR = 'data'
+FUITES_FILE = os.path.join(DATA_DIR, 'fuites.json')
+
+# Crée le dossier data et le fichier s'ils n'existent pas
+if not os.path.exists(DATA_DIR):
+    os.makedirs(DATA_DIR)
+if not os.path.exists(FUITES_FILE):
+    with open(FUITES_FILE, 'w') as f:
+        json.dump([], f)
+
+
+@app.route('/signaler', methods=['GET', 'POST'])
+def signaler():
     if request.method == 'POST':
+        # Charger le JSON existant
         with open(FUITES_FILE, 'r+') as file:
             fuites = json.load(file)
             fuite_id = len(fuites) + 1
+            # Créer le dictionnaire avec les infos du formulaire
             fuite = {
                 "fuite_id": fuite_id,
-                "fuite_latitude": request.form['latitude'],
-                "fuite_longitude": request.form['longitude'],
-                "commentaire": request.form['commentaire'],
-                "photo": request.form['photo'],
-                "utilisateur_id": int(request.form['utilisateur_id']),
-                "statut": "signalée"
+                "lat": request.form['lat'],
+                "lng": request.form['lng'],
+                "commentaire": request.form.get('commentaire', ''),
+                "photo": request.form.get('photo', '')  # si tu gères upload plus tard
             }
             fuites.append(fuite)
             file.seek(0)
             json.dump(fuites, file, indent=4)
-        return redirect(url_for('index'))
+
+        return redirect(url_for('success'))  # page simple de confirmation
     return render_template('signalement.html')
+
+
+@app.route('/success')
+def success():
+    return "<h2>Signalement enregistré ! ✅</h2>"
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
